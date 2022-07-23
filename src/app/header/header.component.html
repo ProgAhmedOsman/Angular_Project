@@ -1,0 +1,31 @@
+
+
+<mat-toolbar color="primary" class="navbar">
+    <div >COLNN</div>
+    <div>
+        <span> Home</span>
+        <span [matMenuTriggerFor]="studentMenu"> Studnts</span>
+        <span [matMenuTriggerFor]="staffMenu"> Staff</span>
+        <span> Accounting</span>
+        <span> Buses</span>
+        <span> About Us </span>
+        <span> Service </span>
+    </div>
+</mat-toolbar>
+
+<mat-menu #studentMenu="matMenu">
+    <button mat-menu-item> online quiz</button>
+    <button mat-menu-item> homework</button>
+    <button mat-menu-item> Questions Bank </button>
+</mat-menu>
+<mat-menu #staffMenu="matMenu">
+    <button mat-menu-item>Staff data</button>
+    <button mat-menu-item> Attendance </button>
+    <button mat-menu-item> salaries</button>
+</mat-menu>
+
+
+<!-- 
+<mat-toolbar-row>
+
+</mat-toolbar-row> -->

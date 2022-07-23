@@ -1,0 +1,122 @@
+<mat-form-field floatLabel="auto" hideRequiredMarker>
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min6characters</mat-hint>
+</mat-form-field>
+<mat-form-field floatLabel="auto" hideRequiredMarker appearance="fill" color="warn">
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min6characters</mat-hint>
+</mat-form-field>
+<mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline" color="accent">
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min6characters</mat-hint>
+</mat-form-field>
+<br>
+
+<mat-form-field>
+    <mat-label> (not grouped)</mat-label>
+    <!-- <mat-select [(value)]="selectedValue" multiple> -->
+    <mat-select [(value)]="selectedValue1">
+        <mat-option disabled>please select one topic</mat-option>
+
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value="react">React</mat-option>
+        <mat-option value="vue">Vue</mat-option>
+
+        <mat-option value="ionic">Ionic</mat-option>
+        <mat-option value="reactnative">React Navtive</mat-option>
+
+    </mat-select>
+</mat-form-field>
+{{selectedValue1}}
+<br>
+<mat-form-field>
+    <mat-label> (grouped -multible)</mat-label>
+    <!-- <mat-select [(value)]="selectedValue" multiple> -->
+    <mat-select [(value)]="selectedValue" multiple>
+        
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="react">React</mat-option>
+            <mat-option value="vue">Vue</mat-option>
+   
+        <mat-optgroup label="Mobile">
+
+            <mat-option value="ionic">Ionic</mat-option>
+            <mat-option value="reactnative">React Navtive</mat-option>
+        </mat-optgroup>
+    </mat-select>
+</mat-form-field>
+
+{{selectedValue}}
+
+
+<h1> check boX and Radio button</h1>
+<mat-checkbox labelPosition="before">
+    Subscribe
+
+</mat-checkbox>
+<br>
+<mat-radio-group>
+    <mat-radio-button value="angular"> angular</mat-radio-button>
+    <mat-radio-button value="react"> react</mat-radio-button>
+</mat-radio-group>
+
+<h1> Date picker</h1>
+<mat-form-field >
+    <mat-label> years</mat-label>
+    <input matInput [matDatepicker]="mydatepicker">
+    <mat-datepicker-toggle [for]="mydatepicker" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #mydatepicker startView="multi-year"></mat-datepicker>
+</mat-form-field>
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+<mat-form-field >
+    <mat-label>   months</mat-label>
+    <input matInput [matDatepicker]="mydatepicker2">
+    <mat-datepicker-toggle [for]="mydatepicker2" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #mydatepicker2 startView="year"></mat-datepicker>
+</mat-form-field>
+&nbsp;
+&nbsp;
+<mat-form-field >
+    <mat-label>   days</mat-label>
+    <input matInput [matDatepicker]="mydatepicker3" [min]="minDate" [max]="maxDate">
+    <mat-datepicker-toggle [for]="mydatepicker3" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #mydatepicker3  ></mat-datepicker>
+</mat-form-field>
+&nbsp;
+&nbsp;
+
+<mat-form-field >
+    <mat-label>   days</mat-label>
+    <input matInput [matDatepicker]="mydatepicker4"  [matDatepickerFilter]="datefilter" >
+    <mat-datepicker-toggle [for]="mydatepicker4" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #mydatepicker4  ></mat-datepicker>
+</mat-form-field>
+&nbsp;
+&nbsp;
+<br>
+<button 
+mat-raised-button
+matTooltipPosition="after"
+matTooltipShowDelay="1000"
+matTooltipHideDelay="1000"
+matTooltip="title">
+     hover to show mattooltip
+</button>
+<br>
+
+
+
+
+
+<mat-card>
+    <button mat-raised-button (click)="openSnackBar('item deleted successfully !' , 'Dismiss','blue-snackbar')"> click to show  Snack bar</button> 
+	<button mat-button (click)="openSnackBar('Hello', 'Close', 'blue-snackbar')">Blue snack-bar</button>
+
+	<button mat-button (click)="openSnackBar('Hello', 'Close', 'red-snackbar')">Red snack-bar</button>
+	<button mat-button (click)="opendialog()">opendialog</button>
+</mat-card>

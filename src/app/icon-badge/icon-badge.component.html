@@ -1,0 +1,39 @@
+icons
+<br>
+<mat-icon>share</mat-icon>
+<mat-icon>done</mat-icon>
+<mat-icon>donut_small</mat-icon>
+<span class="material-icons">
+    share
+    </span>
+<span class="material-icons">
+    fingerprint
+    </span><span class="material-icons">
+        info
+        </span>
+
+<br>
+<div class=" mat-display-4"> badges</div>  
+
+<div style="margin-left:   30px;">
+    <span matBadge="10"
+    matBadgePosition="above after"
+     [matBadgeHidden]="notificationNum===0"
+     matBadgeColor="accent"
+     matBadgeOverlap="false"
+     matBadgeSize="medium"
+     >notifications1</span>
+     <br>
+     <br>
+     <span  matBadge="10"
+     matBadgePosition="above before"
+      [matBadgeHidden]="notificationNum===0"
+      matBadgeColor="accent"
+      matBadgeOverlap="false"
+      matBadgeSize="medium"
+      >notifications1</span>
+</div>
+<br>
+<mat-progress-spinner value="75"></mat-progress-spinner>
+<mat-progress-spinner [value]="spinnerValue"></mat-progress-spinner>
+<mat-spinner></mat-spinner>

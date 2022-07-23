@@ -1,0 +1,33 @@
+<mat-sidenav-container>
+    <mat-sidenav #SideNav mode="side"> 
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+        
+        <span (click)="SideNav.toggle()"  class="material-icons">
+            menu
+            </span>
+        <nav>
+
+            <a routerLink="/typograph" aria-selected="true">text (typograph classes) </a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/button">Buttons</a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/iconbadge">icon-badge-spinner</a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/Listandnavlist">List&navlist</a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/Gridlist">Gridlist and card </a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/Expansionpanel">ExpansionPanel </a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/Stepper">Stepper </a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/Inputs">Inputs </a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/AutoComplet">AutoComplet </a>&nbsp;&nbsp;&nbsp;
+           
+           
+           <a routerLink="/Employee">Employee</a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/Departments">Department</a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/pp">Parent with childred components</a>&nbsp;&nbsp;&nbsp;
+           <a routerLink="/cc">childddddd</a>
+        </nav>
+        <br>
+        
+       
+       <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

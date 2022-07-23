@@ -1,0 +1,38 @@
+
+<div>
+
+    <button mat-button> mat-button </button>
+    <button mat-raised-button> mat-raised-button </button>
+    <button mat-flat-button > flat button </button>
+    <button mat-stroked-button  > stroked-button </button>
+    <button mat-stroked-button disableRipple> stroked-button with disableRipple </button>
+    <br>
+    <button mat-icon-button> mat icon </button>
+    <button mat-fab> mat   fab</button>  
+    <button mat-mini-fab>mat-mini-fab </button>
+</div>
+<br>
+<div>
+    <mat-button-toggle #toggleBtn>
+        togglebutton
+    </mat-button-toggle>
+<br>
+toggle without multiselect as radio button 
+<mat-button-toggle-group #toggleGroup1="matButtonToggleGroup"  >
+    <mat-button-toggle value="yes"> yes</mat-button-toggle>
+    <mat-button-toggle value="no"> no</mat-button-toggle>
+    <mat-button-toggle value="both"> both</mat-button-toggle>
+</mat-button-toggle-group>
+{{toggleGroup1.value}}
+<br>
+toggle with multiselect as radio button 
+<mat-button-toggle-group #toggleGroup2="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="yes"> yes</mat-button-toggle>
+    <mat-button-toggle value="no"> no</mat-button-toggle>
+    <mat-button-toggle value="both"> both</mat-button-toggle>
+</mat-button-toggle-group>
+{{toggleGroup2.value}}
+</div>
+<br>
+
+

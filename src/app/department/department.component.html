@@ -1,0 +1,21 @@
+<div *ngFor="let d of Departments" (click)="Goto(d.Id)">
+  {{ d.Id }}-----{{ d.Name }}
+</div>
+
+<table class=" text-center  table table-bordered "  >
+  <thead>
+    <tr>
+      <td>id</td>
+      <td>name</td>
+      <td>description</td>
+    </tr>
+  </thead>
+ 
+  <tr *ngFor="let d of ListDepartments" >
+    <td>{{ d.id }}</td>
+    <td>{{ d.name }}</td>
+    <td>{{ d.description }}</td>
+  </tr>
+
+  <tbody></tbody>
+</table>
